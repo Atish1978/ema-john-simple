@@ -3,4 +3,19 @@
     padding: 25px;
     position:sticky;
     top:0;
+   
+}
+
+.btn-clear-cart{
+    display:flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px auto;
+    background-color: #ff3030;
+    border-radius: 6px;
+    color: white;
+    height: 56px;
+    font-size: 21px;
+    align-items: center;
+
 }

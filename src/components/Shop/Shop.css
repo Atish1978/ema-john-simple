@@ -10,3 +10,20 @@
     margin:50px;
 
 }
+.proceed-link{
+    text-decoration: none;
+}
+.btn-proceed{
+    
+    display:flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px auto;
+    background-color: orange;
+    border-radius: 6px;
+    color: white;
+    height: 56px;
+    font-size: 21px;
+    align-items: center;
+    
+}
