@@ -1,9 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import "./Login.css";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 
 const Login = () => {
+    
+    const [show, setShow]=useState(false);
 
     const {signIn}=useContext(AuthContext);
     const navigate=useNavigate();
@@ -44,7 +46,13 @@ const Login = () => {
                 </div>
                 <div className='form-control'>
                     <label htmlFor='password'>Password</label>
-                    <input type="password" name='password' id='password' placeholder='Password' required/>
+                    <input type={show ? "text" : "password"} name='password' id='password' placeholder='Password' required/>
+                    <p onClick={()=>setShow(!show)}><small>
+                        {
+                            show ? <span>Hide Password</span> : <span>Show Password</span>
+                        }
+                        
+                        </small></p>
                 </div>
                 <input className='btn-submit' type="submit" value="Login" />
                 <p><small>New to Ema-john? <Link to='/signup'>Create New Account</Link></small></p>
